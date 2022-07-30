@@ -1,6 +1,9 @@
 from django.shortcuts import get_object_or_404, render,redirect
 from hostelapp.models import AddHosteldetailosModel
 from django.contrib import messages
+from hostelapp.serializer import AddHosteldetailosSerializer
+from rest_framework.renderers import JSONRenderer
+import json
 from userapp.models import UserHostelBookingModel, UserProfileModel, UserRegisterModel,UserSendFeedbackModel
 
 # Create your views here.
@@ -82,8 +85,14 @@ def user_myprofile(request):
     return render(request,'main/user-myprofile.html')
 
 def user_search_hostel(request):
-    w=AddHosteldetailosModel.objects.all()
-    return render(request,'main/user-search-hostel.html',{'w':w})
+    hostel=AddHosteldetailosModel.objects.all()
+    serialize=AddHosteldetailosSerializer(hostel,many=True)
+    json_data=JSONRenderer().render(serialize.data)
+    r=json.loads(json_data)
+    for i in r:
+        print(i["image1"])
+    
+    return render(request,'main/user-search-hostel.html',{'w':r})
 
 def user_view_feedback(request,id):
     print(id)

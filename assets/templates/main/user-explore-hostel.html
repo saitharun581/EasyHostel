@@ -107,7 +107,7 @@
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hostel</span></h1>
-                        <p class="mb-4">{{d.hostel_description}}</p>
+                        <p class="mb-4">{{f.hostel_description}}</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
@@ -144,16 +144,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="/media/{{f.image1}}" style="margin-top: 25%;">
+                                <img style="height:200px" class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.1s" src="{{f.image1.url}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="/media/{{f.image2}}">
+                                <img style="height:140px;margin-top:60px;" class="img-fluid rounded w-70 wow zoomIn " data-wow-delay="0.3s" src="{{f.image2.url}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="/media/{{f.image3}}">
+                                <img style="height:140px" class="img-fluid rounded w-70 wow zoomIn" data-wow-delay="0.3s" src="{{f.image3.url}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="/media/{{f.image4}}">
+                                <img style="height:200px" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{{f.image4.url}}">
                             </div>
                         </div>
                     </div>

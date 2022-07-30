@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render,redirect
 from django.core.files import File
 from django.contrib import messages
-from hostelapp.serializer import AddHosteldetailosSerializer
+
 from hostelapp.models import AddHosteldetailosModel, HostelOwnerProfileModel, HostelOwnerRegisterModel
 from userapp.models import UserRegisterModel, UserSendFeedbackModel,UserHostelBookingModel
 from django.core.mail import EmailMultiAlternatives

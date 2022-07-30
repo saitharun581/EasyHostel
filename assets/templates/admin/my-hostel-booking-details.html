@@ -152,7 +152,8 @@
                    
                 </li>
                 <li class="treeview"><a class="waves-effect waves-dark" href="{% url 'add-hostel-details' %}"><i class="icon-briefcase"></i><span> Add Hostel Details</span></a>
-                <li class="treeview  active"><a class="waves-effect waves-dark" href="{% url 'my-hostel-booking' %}"><i class="icon-briefcase"></i><span> Hostel Bookings</span></a>
+                <li class="treeview  active
+                "><a class="waves-effect waves-dark" href="{% url 'my-hostel-booking' %}"><i class="icon-briefcase"></i><span> Hostel Bookings</span></a>
                 <li class="treeview"><a class="waves-effect waves-dark" href="{% url 'my-hostel-feedback' %}"><i class="icon-briefcase"></i><span> My Feedbacks</span></a>
                 <li class="treeview"><a class="waves-effect waves-dark" href="{% url 'hostel-edit-profile' %}"><i class="icon-briefcase"></i><span> Edit profile</span></a>
 
@@ -426,7 +427,7 @@
                        <div class="card">
                           {% for f in k %}
                           <div class="user-block-2">
-                             <img class="img-fluid" src="/media/{{f.profilepic}}" height="150 " width="150" alt="user-header">
+                             <img class="img-fluid" src="{{f.profilepic}}" height="150 " width="150" alt="user-header">
                              <h5>{{f.fullname}}</h5>
                           </div>
                           <div class="card-block">

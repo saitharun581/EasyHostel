@@ -31,6 +31,10 @@ urlpatterns = [
     path('about',main_views.main_about,name='about'),
     path('contact',main_views.main_contact,name='contact'),
     path('services',main_views.main_services,name='services'),
+    path('api',main_views.main_api,name='api'),
+    path('json',main_views.main_json,name='json'),
+
+    
     #admin
     path('admin-login',admin_views.admin_login,name='admin-login'),
     path('admin-home',admin_views.admin_home,name='admin-home'),

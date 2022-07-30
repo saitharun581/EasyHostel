@@ -1,5 +1,4 @@
-from rest_framework import serializers 
-
+from rest_framework import  serializers
 
 class AddHosteldetailosSerializer(serializers.Serializer):
     hostel_id=serializers.IntegerField()
@@ -7,8 +6,8 @@ class AddHosteldetailosSerializer(serializers.Serializer):
     hostelownername=serializers.CharField(max_length=100)
     contact=serializers.IntegerField()
     email=serializers.CharField(max_length=100)
-    hostel_location=serializers.CharField(max_length=500)
-    hostel_description=serializers.CharField(max_length=500)
+    hostel_location=serializers.CharField()
+    hostel_description=serializers.CharField()
     wifi=serializers.CharField(max_length=100)
     water=serializers.CharField(max_length=100)
     beds=serializers.CharField(max_length=100)
